@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  
+  </head>
+  <body>
+      <h1 class="title">Javascript Test </h1>
+      
+      
+      
+      <input id="name" oninput="add_name()" placeholder="Enter your name">
+      
+      <p id="name-paragraph"></p>
+
+      <button onclick="button_clicked()">Click Me</button>
+     
+       <button onmouseenter="button_hoverd()">Click me</button>    
+     
+     <script>
+       
+      function add_name(){
+       
+        let name_input=document.getElementById("name")
+        let name_paragraph=document.getElementById("name-paragraph")
+        
+        name_paragraph.innerText="My name is "+name_input.value;
+        
+        
+        
+      }
+
+      function button_clicked(){
+        alert("I have been clicked");
+      }
+       
+         function button_hoverd(){
+        alert("I have been hoverd")
+            
+         }
+       
+     </script>
+  </body>
+</html>
