@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+                                         
+  
+</head>
+<body>
+  <h1 class="title">Javascript Test </h1>
+<div>
+  <div>
+    <input id="name" type="name"  placeholder="Enter your name">
+  </div>
+  <div>
+    <input id="secret" type="secret" placeholder="secret">
+  </div>
+  <div>
+    <input id="confirmsecret" type="secret" oninput="confirmsecret()" placeholder="Confirm your secret">
+    <p id="name-paragraph"></p>
+  </div>
+<script>
+
+
+function confirmsecret(){
+       
+       let secret_input=document.getElementById("secret")
+       let secret_valid_paragraph=document.getElementById("name-paragraph")
+       let confirm_secret= document.getElementById("confirmsecret")
+       
+       if (confirm_secret.value===secret_input.value){
+
+        secret_valid_paragraph.innerText="secret match";
+        secret_valid_paragraph.style.color="green"
+
+       }
+       else{
+        secret_valid_paragraph.innerText="secret do not match";
+        secret_valid_paragraph.style.color="red"
+       }
+       
+       
+       
+       
+       
+     }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<DOCTYPE html>
+<html>
+<head>
+
+    
+</head>
+<body>
+
+
+<h1>Math Test </h1>
+
+    <p id="score"></p>
+    <p id="levelDisplay"></p>
+<div>
+    
+<p id="equestion"></p> 
+<input id="answer">
+
+<button id="checkAnswer" onclick="checkAnswer()">Check Answer</button>
+<button onclick="generateQuestion()">Another Question</button>
+<p id="answerDisplay"></p>
+</diV>
+
+
+
+
+
+<script>
+    let questions=1
+    let correct=0
+    let level =1;
+    let multiplier=[0, 10, 100, 1000, 10000, 100000]
+    let number1=Math.floor(Math.random() * 10);
+    let number2=Math.floor(Math.random() * 10);
+    let equation= document.getElementById("equestion")
+    let checkAnswerButton= document.getElementById("checkAnswer")
+    document.getElementById("levelDisplay").innerText="Level: "+level;
+    equation.innerText= number1 + "+" + number2
+    
+    function checkAnswer(){
+        let answer_display=document.getElementById("answerDisplay")
+        let answerValue=document.getElementById("answer").value
+        let score=document.getElementById("score")
+        checkAnswerButton.disabled= true;
+        
+        
+    if ((number1+number2)===parseInt(answerValue)){
+    
+        answer_display.innerText="Correct";
+        answer_display.style.color="green";
+        correc++;
+       
+    }
+    else{
+        answer_display.innerText="Wrong try again"
+        answer_display.style.color="Red";
+    }
+    
+    score.innerText=correct+"/"+ questions
+  
+    }
+function checkLevel(){
+
+        if (correct>10 && correct <20){
+
+
+            level=2;
+        }
+        else if (correct>20 && correct<30){
+    level=3;
+        }
+        else if (correct>30 && correct<40)
+        {
+    level=4;
+        }
+        else{
+            level=1;
+        }
+
+document.getElementById("levelDisplay").innerText="Level: "+level;
+
+
+    }
+    
+    function generateQuestion(){
+
+        checkLevel();
+        let currentMultiplier=multiplier[level]
+    
+        number1=Math.floor(Math.random() * currentMultiplier);
+        number2=Math.floor(Math.random() * currentMultiplier);
+        equation.innerText= number1 + "+" + number2
+        questions=questions+1
+        checkAnswerButton.disabled=false;
+    }
+    
+    
+    
+    
+    
+        </script>
+    
+    
+    
+    
+    
+
+
+
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+</DOCTYPE html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  
+  </head>
+  <body>
+    <h1 class="title">Javascript Test </h1>                                       
+      
+    <div>
+      <input id="password" type="password"  placeholder="Enter your password">
+    </div>
+    <div>
+      <input id="confirmPassword" type="password" oninput="confirmPassword()" placeholder="Confirm your password">
+    </div>
+    <script>
+
+
+
+     <script>
+       
+      function confirmPassword(){
+       
+        let password_input=document.getElementById("password")
+        let password_valid_paragraph=document.getElementById("name-paragraph")
+        let confirm_password= document.getElementById("confirmPassword")
+        
+        if (confirm_password.value===password_input.value){
+
+          password_valid_paragraph.innerText="Password match";
+          password_valid_paragraph.style.color="green"
+
+        }
+        else{
+          password_valid_paragraph.innerText="Password do not match";
+          password_valid_paragraph.style.color="red"
+        }
+        
+        
+        
+        
+        
+      }
+
+ 
+
+
+
+      
+      
+
+
+     </script>
+  </body>
+</html>
