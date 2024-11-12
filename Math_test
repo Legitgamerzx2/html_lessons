@@ -21,7 +21,124 @@
 <p id="answerDisplay"></p>
 </diV>
 
+<!DOCTYPE html>
+<html>
+<head>
 
+    
+</head>
+<body>
+<h1>Math Test</h1>
+<p id="score"></p>
+
+<diV>
+<p id="equestion"></p> 
+<input id="answer">
+
+<button onclick="checkAnswer()">Check Answer</button>
+<button onclick="generateQuestion()">Another Question</button>
+<p id="answerDisplay"></p>
+</diV>
+
+
+
+
+
+<script>
+let questions=1
+let correct=0
+let number1=Math.floor(Math.random() * 100);
+let number2=Math.floor(Math.random() * 100);
+let equation= document.getElementById("equestion")
+equation.innerText= number1 + "+" + number2
+
+function checkAnswer(){
+    let answer_display=document.getElementById("answerDisplay")
+    let answerValue=document.getElementById("answer").value
+    let score=document.getElementById("score")
+    
+if ((number1+number2)===parseInt(answerValue)){
+
+    answer_display.innerText="Correct"
+    correct=correct+1
+   
+}
+else{
+    answer_display.innerText="Wrong try again"
+}
+
+score.innerText=correct+"/"+ questions
+q
+}
+
+
+function generateQuestion(){
+
+    number1=Math.floor(Math.random() * 100);
+    number2=Math.floor(Math.random() * 100);
+    equation.innerText= number1 + "+" + number2
+    questions=questions+1
+}
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
 
 
 
